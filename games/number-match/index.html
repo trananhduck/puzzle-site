@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Nối Số – ƯCLN</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="app">
+<a class="back" href="../../index.html">← Trang chủ</a>
+<h1>🔢 Nối Số – ƯCLN</h1>
+<div class="bar" id="dt"></div>
+<div class="bar lv" id="lt"></div>
+<div class="stats"><div><b id="t">0:00</b>Thời gian</div><div><b id="r">64</b>Còn lại</div></div>
+<div class="bar">
+<button id="undo">↶ Undo</button><button id="redo">↷ Redo</button>
+<button id="rs">⟲ Bắt đầu lại</button><button id="sh">🔗 Chia sẻ màn</button>
+</div>
+<div class="share" id="shb"><input id="url" readonly><button id="cp">Sao chép</button></div>
+<div class="board"><div class="grid" id="grid"></div>
+<svg viewBox="0 0 10 10"><polyline id="ln" points=""/></svg>
+<div class="ov" id="ov"><div id="ovt"></div><button class="p" id="nx">Màn tiếp theo</button></div></div>
+<div class="msg" id="msg"></div>
+<details><summary>Luật chơi</summary>
+<p>Chọn 2 ô nối được bằng đường ngang/dọc đi qua ô trống (được đi vòng ngoài bàn), tối đa 3 nét. Cả hai số được chia cho ƯCLN: số nào ra 1 thì biến mất, số khác 1 được thay bằng thương. Nếu ƯCLN = 1 thì không đổi. Xóa sạch bàn là thắng.</p>
+<p>Khi hết nước đi hoặc bàn không còn cách giải, game tự xáo các số còn lại thành một thế chắc chắn giải được. Mỗi màn có link riêng (nút Chia sẻ).</p>
+<p>Easy: số 2 chữ số. Medium: trộn 2 và 3 chữ số. Hard: chủ yếu 3 chữ số.</p></details>
+</div>
+<script src="script.js"></script>
+</body>
+</html>

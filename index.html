@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Góc Giải Đố</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main class="wrap">
+  <h1>🧩 Góc Giải Đố</h1>
+  <p class="sub">Các trò chơi toán học chạy thẳng trên trình duyệt.</p>
+  <div class="cards" id="cards"></div>
+</main>
+<script src="games.js"></script>
+<script>
+  // Thêm game mới: chỉ cần thêm 1 mục vào games.js
+  const box = document.getElementById('cards');
+  GAMES.forEach(g => {
+    const a = document.createElement('a');
+    a.className = 'card';
+    a.href = g.path;
+    a.innerHTML = '<div class="ic">' + g.icon + '</div><h2>' + g.title + '</h2><p>' + g.desc + '</p><span>' + g.tag + '</span>';
+    box.appendChild(a);
+  });
+</script>
+</body>
+</html>
